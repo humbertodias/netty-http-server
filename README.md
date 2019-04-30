@@ -18,3 +18,6 @@ Simple Demo of a Http Server using Netty.
 # Open
 
     http://localhost:2222/?p1=111&p2=222&p2=aaaa
+
+
+![](doc/browser-output.png)
