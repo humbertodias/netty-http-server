@@ -1,6 +1,10 @@
+# IntelliJ
 .idea
-.settings
-.project
 *.iml
 
+# VisualCode
+.settings
+.project
+
+# Maven
 target/
