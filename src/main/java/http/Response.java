@@ -28,11 +28,9 @@ public abstract class Response {
         write();
         out.flush();
         FullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
-                HttpResponseStatus.OK,
-                Unpooled.wrappedBuffer(baos.toByteArray()));
-        response.headers()
-                .set(CONTENT_TYPE, TEXT_PLAIN)
-                .set(CONTENT_LENGTH, response.content().readableBytes());
+                HttpResponseStatus.OK, Unpooled.wrappedBuffer(baos.toByteArray()));
+        response.headers().set(CONTENT_TYPE, TEXT_PLAIN).set(CONTENT_LENGTH,
+                response.content().readableBytes());
         ctx.writeAndFlush(response);
         baos.reset();
     }

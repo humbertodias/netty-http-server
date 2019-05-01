@@ -14,11 +14,13 @@
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
             <version>${netty.version}</version>
         </dependency>
+
     </dependencies>
 
     <build>
@@ -40,7 +42,7 @@
             <!-- jar-with-dependencies -->
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
-                <version>2.2</version>
+                <version>3.1.1</version>
                 <configuration>
                     <finalName>${final.name}</finalName>
                     <archive>
@@ -72,6 +74,7 @@
                 <version>2.9.0</version>
                 <configuration>
                     <encoding>UTF-8</encoding>
+                    <configFile>${project.basedir}/etc/eclipse-formatter-config.xml</configFile>
                 </configuration>
                 <executions>
                     <execution>

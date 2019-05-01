@@ -20,10 +20,8 @@ public class Main {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         ServerBootstrap bootstrap = new ServerBootstrap();
-        bootstrap.group(bossGroup, workerGroup)
-                .handler(new LoggingHandler(LogLevel.INFO))
-                .channel(NioServerSocketChannel.class)
-                .childHandler(new ServerInitializer())
+        bootstrap.group(bossGroup, workerGroup).handler(new LoggingHandler(LogLevel.INFO))
+                .channel(NioServerSocketChannel.class).childHandler(new ServerInitializer())
                 .option(ChannelOption.SO_BACKLOG, 128)
                 .childOption(ChannelOption.SO_KEEPALIVE, true);
         try {

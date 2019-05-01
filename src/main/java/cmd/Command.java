@@ -39,6 +39,10 @@ public enum Command {
         this.argument = argument;
         return this;
     }
+    
+    public String getArgument() {
+    	return argument;
+    }
 
     private FullHttpRequest request;
 

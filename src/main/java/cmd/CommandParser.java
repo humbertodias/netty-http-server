@@ -7,7 +7,8 @@ public class CommandParser {
     private CommandParser() {
     }
 
-    private static final Pattern pattern = Pattern.compile("/(?<cmd>echo|time)(?<arg>.*)", Pattern.CASE_INSENSITIVE);
+    private static final Pattern pattern = Pattern.compile("/(?<cmd>echo|time)(?<arg>.*)",
+            Pattern.CASE_INSENSITIVE);
 
     public static Command parse(String line) {
         if (line.startsWith("/")) {
